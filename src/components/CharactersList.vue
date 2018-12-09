@@ -4,14 +4,18 @@
       <ContentPlaceholdersHeading />
     </ContentPlaceholders>
 
-    <div
-      v-for="character in characters"
-      :key="character.id"
-      class="base-item"
+    <TransitionGroup
+      name="bounce"
+      tag="div"
     >
-      <CharacterItem :character="character" />
-    </div>
-
+      <div
+        v-for="character in characters"
+        :key="character.id"
+        class="base-item"
+      >
+        <CharacterItem :character="character" />
+      </div>
+    </TransitionGroup>
     <div
       v-if="showLoadMoreButton"
       class="link-container"
@@ -65,3 +69,20 @@ export default {
     }
 }
 </script>
+
+<style>
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+</style>

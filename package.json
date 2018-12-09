@@ -9,6 +9,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "javascript-time-ago": "^1.0.34",
     "lodash": "^4.17.11",
     "vue": "^2.5.17",
     "vue-content-placeholders": "^0.2.1",

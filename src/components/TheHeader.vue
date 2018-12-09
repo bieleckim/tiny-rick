@@ -1,11 +1,11 @@
 <template>
   <header class="header">
-    <a
-      href="/"
+    <RouterLink
+      to="/"
       class="header__logo"
     >
       <Logo />
-    </a>
+    </RouterLink>
 
     <button
       class="header__nav-trigger"

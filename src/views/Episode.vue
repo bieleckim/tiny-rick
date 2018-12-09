@@ -34,7 +34,7 @@
                 
         <div class="episode__right-col">
           <h2>Comments</h2>
-          <!-- Comments -->
+          <CommentsList :episode-id="id" />
         </div>
       </div>
     </template>
@@ -50,13 +50,15 @@
 import ArrowIcon from '@/assets/icon-arrow-left.svg'
 import EpisodeItem from '@/components/EpisodeItem.vue'
 import CharactersList from '@/components/CharactersList.vue'
+import CommentsList from '@/components/CommentsList.vue'
 import { fetchEpisode } from '@/api'
 
 export default {
     components: {
         ArrowIcon,
         EpisodeItem,
-        CharactersList
+        CharactersList,
+        CommentsList
     },
     props: {
         id: {

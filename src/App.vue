@@ -2,7 +2,12 @@
   <div id="app">
     <TheHeader />
     <main class="main">
-      <RouterView />
+      <Transition
+        name="fade"
+        mode="out-in"
+      >
+        <RouterView />
+      </Transition>
     </main>
   </div>
 </template>

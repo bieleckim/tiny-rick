@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Episodes from '@/views/Episodes.vue'
 import Episode from '@/views/Episode.vue'
+import Quiz from '@/views/Quiz.vue'
 
 Vue.use(Router)
 
@@ -19,6 +20,11 @@ export default new Router({
       name: 'episode',
       component: Episode,
       props: true
+    },
+    {
+      path: '/quiz',
+      name: 'quiz',
+      component: Quiz
     },
   ]
 })
